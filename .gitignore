@@ -1,0 +1,44 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+dist-ssr/
+*.local
+
+# Database and its write-ahead log. This holds live business data and password
+# hashes, so it must never be committed.
+server/data/
+*.db
+*.db-wal
+*.db-shm
+
+# Secrets. Commit .env.example instead.
+.env
+.env.*
+!.env.example
+!.env.production
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Editor and OS noise
+.vscode/*
+!.vscode/extensions.json
+.idea/
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Test artefacts
+coverage/
+.nyc_output/
+# Source archive the project was extracted from. Not part of the codebase.
+*.zip

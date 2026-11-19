@@ -1,0 +1,40 @@
+{
+  "name": "afritecx-badboy",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Afritecx Badboy — POS, inventory, payroll and double-entry accounting for bar bottlestores.",
+  "type": "module",
+  "engines": {
+    "node": ">=22.5.0"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "start": "node server/index.mjs",
+    "db": "node server/index.mjs",
+    "db:test": "node server/seed.mjs",
+    "typecheck": "tsc --noEmit",
+    "verify": "tsc --noEmit && vite build"
+  },
+  "dependencies": {
+    "clsx": "2.1.1",
+    "html5-qrcode": "^2.3.8",
+    "lucide-react": "^1.14.0",
+    "react": "19.2.3",
+    "react-dom": "19.2.3",
+    "recharts": "^3.8.1",
+    "tailwind-merge": "3.4.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "4.1.17",
+    "@types/node": "22.19.17",
+    "@types/react": "19.2.7",
+    "@types/react-dom": "19.2.3",
+    "@vitejs/plugin-react": "5.1.1",
+    "tailwindcss": "4.1.17",
+    "typescript": "5.9.3",
+    "vite": "7.3.2",
+    "vite-plugin-singlefile": "2.3.0"
+  }
+}

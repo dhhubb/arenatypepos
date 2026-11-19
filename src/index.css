@@ -1,0 +1,76 @@
+@import "tailwindcss";
+
+/* ==========================================================================
+   HIGH-FIDELITY PRINT & PDF OVERRIDES FOR THE PLUMTREE BAR ERP
+   ========================================================================== */
+@media print {
+  /* 1. Hide all navigation, sidebars, headers, footers, forms, buttons, and system controls */
+  header, 
+  nav, 
+  button, 
+  select, 
+  input, 
+  form, 
+  footer, 
+  .print\:hidden {
+    display: none !important;
+  }
+
+  /* 2. Reset the main viewport layout to isolate the printable document */
+  body, 
+  #root, 
+  main {
+    background: #ffffff !important;
+    color: #000000 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    overflow: visible !important;
+    height: auto !important;
+    width: 100% !important;
+    max-width: none !important;
+    display: block !important;
+  }
+
+  /* 3. Expand the target report container to fill the entire paper width */
+  .max-w-3xl,
+  .max-w-lg,
+  .max-w-md,
+  .bg-white,
+  .bg-gray-50,
+  .shadow-sm,
+  .shadow-md,
+  .border {
+    background-color: #ffffff !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  /* 4. Ensure high contrast for small general ledger details and grid texts */
+  table, 
+  tr, 
+  td, 
+  th {
+    border-bottom: 1px solid #e2e8f0 !important;
+    color: #000000 !important;
+  }
+
+  /* 5. Set up clean page margins and avoid splitting table lines midway */
+  @page {
+    size: auto;
+    margin: 15mm 10mm 15mm 10mm;
+  }
+
+  tr {
+    page-break-inside: avoid;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    page-break-after: avoid;
+    color: #000000 !important;
+  }
+}
+
