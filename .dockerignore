@@ -1,0 +1,39 @@
+# Keep the build context small and keep live business data out of the image.
+#
+# Without this file `COPY . .` pulls the whole working tree into the build
+# stage, and the runtime stage then copies /app/server into the final image —
+# which would bake server/data/afritecx.db, including password hashes and real
+# sales history, into every image you build.
+
+# Dependencies and build output are produced inside the image.
+node_modules
+dist
+dist-ssr
+
+# Live database, its write-ahead log and any local backups.
+server/data
+*.db
+*.db-wal
+*.db-shm
+*.sqlite
+*.sqlite3
+
+# Version control and editor noise.
+.git
+.gitignore
+.vscode
+.idea
+.DS_Store
+
+# Local secrets. .env.production is deliberately NOT ignored: the build reads
+# VITE_API_BASE_URL from it, and without that value the bundle falls back to
+# browser-only storage instead of talking to the SQL API.
+.env
+.env.local
+.env.*.local
+
+# Source archive, logs and test artefacts.
+*.zip
+*.log
+coverage
+.nyc_output

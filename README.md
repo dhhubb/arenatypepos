@@ -8,6 +8,10 @@ This README records what was changed during the audit and remediation pass, and
 why. The frontend layout, styling and navigation were deliberately left alone —
 only labels, wording, validation and data paths changed.
 
+To take this from a working local copy to a live deployment, follow
+**[DEPLOYMENT.md](DEPLOYMENT.md)** — it covers Node setup, production passwords,
+the build, Docker or a VPS, HTTPS, and backups.
+
 ---
 
 ## 1. What was broken
